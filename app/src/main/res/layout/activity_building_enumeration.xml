@@ -1,0 +1,258 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ensoft.mob.waterbiller.BuildingEnumerationActivity">
+
+
+
+    <ScrollView android:id="@+id/scrollview_building_enumeration" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/create_status"
+                    android:text="@string/authorization_status" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/AreaName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:text="Area Name"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/editAreaName"
+                    android:layout_width="0dp"
+                    android:editable="false"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:textColor="@color/half_black"
+                    android:background="@drawable/apptheme_edit_text_holo_light"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/Street"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:text="Street Name"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/editStreet"
+                    android:editable="false"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:textColor="@color/half_black"
+                    android:background="@drawable/apptheme_edit_text_holo_light"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/imagePhoto"
+                    android:src="@drawable/camera_new"
+                    android:contentDescription="Building Image"
+                    android:clickable="true"
+                    />
+                <TextView
+                    android:id="@+id/houseImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="House Image"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/HouseName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:text="House Title"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/editHouseName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:textColor="@color/half_black"
+                    android:background="@drawable/apptheme_edit_text_holo_light"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/HouseNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:text="House Number"
+                    android:textColor="@color/black" />
+
+                <EditText
+                    android:id="@+id/editHouseNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:textColor="@color/half_black"
+                    android:background="@drawable/apptheme_edit_text_holo_light"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/HouseCategory"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:text="Select Building Category"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="7dp" />
+
+                <!--Spinner-->
+                <Spinner
+                    android:id="@+id/spinnerHouseCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:prompt="@string/buildingcategory_spinner_prompt"
+                    android:paddingTop="0dp"
+                    android:paddingLeft="0dp"
+                    android:spinnerMode="dialog"
+                    android:paddingBottom="1dp"
+                    android:layout_weight="1.5"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    style="@style/SpinnerAppTheme"></Spinner>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/building_owner_name"
+                android:hint="Building Owner Name"
+                android:inputType=
+                    "textCapSentences|textAutoCorrect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/apptheme_edit_text_holo_light"
+                />
+
+            <EditText
+                android:id="@+id/building_owner_email"
+                android:hint="Email Address(Optional)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/apptheme_edit_text_holo_light"
+                />
+
+            <EditText
+                android:id="@+id/building_owner_phoneno"
+                android:hint="Phone Number(Optional)"
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/apptheme_edit_text_holo_light"
+                />
+
+
+            <Button android:id="@+id/enumeration_button"
+                style="?android:textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Save"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/semi_transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fab:fab_icon="@drawable/ic_report_big"
+        fab:fab_colorNormal="@color/blue_semi_transparent"
+        fab:fab_colorPressed="@color/blue_semi_transparent_pressed"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        fab:fab_addButtonSize="mini"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="1dp" />
+
+<!--fab:fab_plusIconColor="@color/white"  android:spinnerMode="dialog"-->
+</RelativeLayout>

@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ensoft.mob.waterbiller"
+    android:largeHeap="true"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- <uses-permission android:name="android.permission.FLASHLIGHT"/> -->
+    <uses-permission
+        android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+    <!-- <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/> -->
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <permission
+        android:name="com.ensoft.mob.waterbiller.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.ensoft.mob.waterbiller.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    //VolleyApplication
+
+    <!-- <uses-permission android:name="android.permission.send_respond_via_message"/> -->
+    <!--
+<permission
+        android:name="com.ensoft.mob.waterbiller.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.ensoft.mob.waterbiller.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    -->
+    <!-- Service that delivers SMS messages received from the phone "quick response" -->
+    <!--
+<service android:name=".HeadlessSmsSendService"
+        android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE"
+        android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:scheme="sms" />
+            <data android:scheme="smsto" />
+            <data android:scheme="mms" />
+            <data android:scheme="mmsto" />
+        </intent-filter>
+    </service>
+    -->
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:noHistory="true"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:logo="@drawable/logo"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity
+            android:name=".AuthorizationActivity"
+            android:label="@string/title_activity_authorization"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.LoginActivity" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_my_settings" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" />
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.MainActivity" />
+        </activity>
+        <!--
+        <activity
+            android:name=".AuthorizeSuccessActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_authorize_success"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+        -->
+        <activity
+            android:name=".StreetListActivity"
+            android:label="@string/title_activity_street_list"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.MainActivity" />
+        </activity>
+        <activity
+            android:name=".EnumerationActivity"
+            android:icon="@drawable/logo"
+            android:label="@string/title_activity_enumeration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BillingActivity"
+            android:label="@string/title_activity_billing"
+            android:noHistory="true"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.StreetListActivity" />
+        </activity>
+        <activity
+            android:name=".BuildingListActivity"
+            android:label="@string/title_activity_building_list"
+            android:parentActivityName=".StreetListActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.StreetListActivity" />
+        </activity>
+        <activity
+            android:name=".TestingActivity"
+            android:label="@string/title_activity_testing" />
+        <activity
+            android:name=".ReportActivity"
+            android:label="@string/title_activity_report"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.MainActivity" />
+        </activity>
+        <activity
+            android:name=".BuildingEnumerationActivity"
+            android:label="@string/title_activity_building_enumeration"
+            android:noHistory="true"
+            android:parentActivityName=".BuildingListActivity"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.StreetListActivity" />
+        </activity>
+        <activity
+            android:name=".MeterEnumerationActivity"
+            android:label="@string/title_activity_meter_enumeration"
+            android:noHistory="true"
+            android:parentActivityName=".BuildingListActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.StreetListActivity" />
+        </activity>
+        <activity
+            android:name=".CameraUseActivity"
+            android:label="@string/title_activity_camera_use"
+            android:noHistory="true"
+            android:parentActivityName=".BuildingListActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.BuildingListActivity" />
+        </activity>
+        <activity
+            android:name=".TestPrinterActivity"
+            android:label="@string/title_activity_test_printer"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".PrintMeActivity"
+            android:label="@string/title_activity_print_me" />
+        <activity
+            android:name=".BTDeviceList"
+            android:theme="@style/AppThemeAlt" />
+        <activity
+            android:name=".NewBuildingSuccessActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_new_building_success"
+            android:noHistory="true"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".BillingConfirmActivity"
+            android:label="@string/title_activity_billing_confirm"
+            android:parentActivityName=".BillingActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.BillingActivity" />
+        </activity>
+        <activity
+            android:name=".ReportingActivity"
+            android:label="Reporting"
+            android:parentActivityName=".StreetListActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.StreetListActivity" />
+        </activity>
+        <activity
+            android:name=".AuthorizeSuccessActivity"
+            android:label="Authorization Success" />
+        <activity
+            android:name=".MySettingsActivity"
+            android:label="@string/title_activity_my_settings"
+            android:parentActivityName=".StreetListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+                android:value="com.ensoft.mob.waterbiller.StreetListActivity" />
+        </activity>
+        <activity
+            android:name=".BuildingMapLocationActivity"
+            android:label="@string/title_activity_building_map_location"
+            android:parentActivityName=".BuildingListActivity"
+            android:theme="@style/Theme.AppCompat.Light">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.BuildingListActivity" />
+        </activity>
+        <activity
+            android:name=".CreatePasswordActivity"
+            android:label="Create Password"
+            android:noHistory="true"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+
+        <!-- Register MyService -->
+        <service
+            android:name=".Services.SyncServices"
+            android:enabled="true" />
+        <service
+            android:name=".Services.AuthorizationService"
+            android:enabled="true" />
+
+        <!-- Register BroadCase Receiver -->
+        <receiver
+            android:name=".Services.AuthorizationReceiver"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- <action android:name="com.ensoft.mob.waterbiller"/> -->
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".Broadcaster.MyBroadcastReceiver"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Broadcaster.NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDXn2BbJ5Pjgi8mNBW2rKwHeW7f_pNCGG0" />
+        <!-- AIzaSyA8osAInbdKd8C57m7JnAa3qwdVyH-aHzY -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".NewMeterSuccessActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_new_meter_success"
+            android:noHistory="true"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".ReportingSccessActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_reporting_sccess"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".ProfileExistActivity"
+            android:label="@string/title_activity_profile_exist"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.MainActivity" />
+        </activity>
+        <activity
+            android:name=".individual_profile"
+            android:label="@string/title_activity_individual_profile"
+            android:parentActivityName=".BuildingListActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.ProfileExistActivity" />
+        </activity>
+        <activity
+            android:name=".corperate_profile"
+            android:label="@string/title_activity_corperate_profile"
+            android:parentActivityName=".BuildingListActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.ProfileExistActivity" />
+        </activity>
+        <activity
+            android:name=".BillSearchActivity"
+            android:label="@string/title_activity_bill_search"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.MainActivity" />
+        </activity>
+        <activity
+            android:name=".BillListActivity"
+            android:label="@string/title_activity_bill_list"
+            android:parentActivityName=".BillSearchActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.BillSearchActivity" />
+        </activity>
+        <activity
+            android:name=".ChooseMobilePaymentActivity"
+            android:label="@string/title_activity_choose_mobile_payment"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".iReportActivity"
+            android:label="@string/title_activity_i_report"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PreBillingActivity"
+            android:label="@string/title_activity_pre_billing"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ensoft.mob.waterbiller.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>

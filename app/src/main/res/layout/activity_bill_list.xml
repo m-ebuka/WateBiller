@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ensoft.mob.waterbiller.BillListActivity">
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@color/button_material_dark"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent"
+            android:padding="4dp">
+
+            <TextView android:id="@+id/btnID"
+                style="?android:textAppearanceMedium"
+                android:background="@color/button_material_dark"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ID"
+                android:gravity="center"
+                android:layout_marginLeft="45dp"
+                android:visibility="gone" />
+
+            <TextView android:id="@+id/btnNAME"
+                style="?android:textAppearanceMedium"
+                android:background="@color/button_material_dark"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ACCOUNT"
+                android:layout_marginLeft="45dp"
+                android:paddingLeft="12dp"
+                android:gravity="left|center" />
+
+            <TextView android:id="@+id/btnBUILDINGS"
+                style="?android:textAppearanceMedium"
+                android:background="@color/button_material_dark"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="METER"
+                android:gravity="center" />
+
+            <TextView android:id="@+id/btnTOTALACCOUNT"
+                style="?android:textAppearanceMedium"
+                android:background="@color/button_material_dark"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="AMOUNT"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="No matching bill record found."
+            android:id="@+id/textView2"
+            android:layout_gravity="center"
+            android:layout_marginTop="17dp"
+            android:padding="15dp"
+            android:textSize="17dp"
+            android:visibility="invisible"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView_bill" />
+
+    </LinearLayout>
+
+</RelativeLayout>

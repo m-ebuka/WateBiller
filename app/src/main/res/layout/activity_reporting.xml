@@ -1,0 +1,169 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ensoft.mob.waterbiller.ReportActivity">
+    <!-- Authorization progress -->
+    <ProgressBar android:id="@+id/authorization_progress" style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" android:visibility="gone" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView android:id="@+id/billing_form" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="2dp"
+              >
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+<TextView
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:layout_height="match_parent"
+    android:text="Area Name:"
+    android:paddingRight="5dp"
+    android:textAlignment="gravity"
+    android:gravity="center_vertical" />
+                    <EditText
+                        android:id="@+id/area_name"
+                        android:hint="marina resort"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/half_black"
+                        android:background="@drawable/apptheme_edit_text_holo_light"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:text="Street Name:"
+                        android:paddingRight="5dp"
+                        android:textAlignment="gravity"
+                        android:gravity="center_vertical" />
+                    <EditText
+                        android:id="@+id/street_name"
+                        android:hint="eket avenue"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/half_black"
+                        android:background="@drawable/apptheme_edit_text_holo_light"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/layoutBuilding"
+                    >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="House Number:"
+                    android:paddingRight="5dp"
+                    android:textAlignment="gravity"
+                    android:gravity="center_vertical" />
+                <EditText
+                    android:id="@+id/building_no"
+                    android:hint="flat 4b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/half_black"
+                    android:background="@drawable/apptheme_edit_text_holo_light"
+                    />
+            </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Type of Report:"
+                    android:paddingTop="5dp"
+                    android:textAlignment="gravity"
+                    android:gravity="center_vertical" />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/challenge_type"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/half_black"
+                    android:prompt="@string/type_of_report"
+                    android:paddingTop="0dp"
+                    android:paddingLeft="0dp"
+                    android:spinnerMode="dialog"
+                    android:paddingBottom="1dp"
+                    android:layout_weight="1.5"
+                    android:layout_gravity="left"
+                    android:gravity="left"
+                    style="@style/SpinnerAppTheme"
+                    />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textAutoComplete|textAutoCorrect|textMultiLine"
+                    android:ems="10"
+                    android:isScrollContainer="true"
+                    android:minHeight="120dp"
+                    android:layout_marginBottom="5dp"
+                    android:id="@+id/challenge_description"
+                    android:hint="Comment/Description"
+                    android:textColor="@color/half_black"
+                    android:background="@drawable/apptheme_edit_text_holo_light"
+                    android:maxLines="6" />
+
+                <Button android:id="@+id/report_button" style="?android:textAppearanceMedium"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@drawable/apptheme_edit_text_holo_light"
+                    android:layout_marginTop="10dp" android:text="@string/submit_report"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+   <!-- <LinearLayout android:id="@+id/footer" android:layout_width="fill_parent"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        android:layout_alignParentBottom="true" style="@android:style/ButtonBar"
+        android:background="#666">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="(c) Powered by Techvibes Int. Ltd."
+            android:id="@+id/copy_right"
+            android:textColor="#fff"
+            android:gravity="top|center"
+            android:padding="10dp"
+            />
+
+    </LinearLayout>
+    -->
+
+</RelativeLayout>

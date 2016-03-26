@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Aqua Biller</string>
+
+    <string name="dummy_button">Skip</string>
+    <string name="dummy_content">TAXO\nWATER BILLER</string>
+    <string name="authorize_button">Authorize Me</string>
+    <string name="title_activity_authorization">WaterBiller: Authorization</string>
+    <string name="hint_service_id">Service Code</string>
+
+    <string name="authorization_comment">Request for authorization by entering your service code and email address</string>
+    <string name="authorization_status">Authorization Status</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">TAXO Aqua BILLER</string>
+    <string name="GPSAlertDialogTitle">GPS Alert</string>
+    <string name="GPSAlertDialogMessage">Unable to connect to GPS</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_example">Example action</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <string name="test_api">test api display</string>
+    <string name="title_activity_authorization_success">Authorization Success</string>
+    <string name="title_activity_about">About Taxo Aqua Biller</string>
+    <string name="meter_number">Meter Number</string>
+    <string name="street">Street Number</string>
+    <string name="meter_reading">Meter reading value</string>
+    <string name="building">Building Number</string>
+    <string name="send_billing">Save</string>
+    <string name="submit_enumeration">Save</string>
+
+    <string name="title_activity_authorize_success">Success</string>
+    <string name="title_activity_street_list">Street Listing</string>
+    <string name="title_activity_enumeration">Building Enumeration</string>
+    <string name="title_activity_billing">Meter Reading/Billing</string>
+    <string name="some_hint">type street name to filter</string>
+    <string name="search_meter_hint">type meter number to filter</string>
+    <string name="title_activity_building_list">Building List</string>
+    <string name="about_description">Taxo AquaBiller is an application that helps facilitate the fast, timely and accurate collection of data and processing of water billing information of various customers of the Water Board Service. Using reliable and easy online routes provided by this application, a customer can be registered and properly documented by the water board service providers thereby eliminating the gruesome task of paperwork. This application is a module of the Taxo Solution application also powered by TechVibes International Limited.</string>
+    <string name="title_activity_test_work">TestWorkActivity</string>
+    <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_testing">TestingActivity</string>
+    <string name="title_activity_report">User Report</string>
+    <string name="submit_report">Submit Report</string>
+    <string name="footer_bar_text">(c) Powered by Techvibes Int. Ltd.</string>
+    <string name="action_search_street">Search by Street Name</string>
+    <string name="title_activity_building_enumeration">BuildingEnumerationActivity</string>
+    <string name="title_activity_meter_enumeration">MeterEnumerationActivity</string>
+    <string name="title_activity_camera_use">CameraUseActivity</string>
+    <string name="title_activity_test_printer">TestPrinterActivity</string>
+    <string name="title_activity_print_me">PrintMeActivity</string>
+    <string name="title_activity_new_building_success">Successful Building Enumeration</string>
+    <string name="buildingcategory_spinner_prompt">Select Category</string>
+    <string name="title_activity_billing_confirm">Confirm Billing</string>
+
+    <string name="generic_server_down">Server is down</string>
+    <string name="no_internet">Limited Internet Connectivity</string>
+    <string name="generic_error">Error occured</string>
+    <string name="authorization_endpoint">http://aquabiller.com/demo/webS/request.php/users/request</string>
+    <!--http://aquabiller.taxo-igr.com/webS/request.php/users/request--><!--http://aquabiller.taxo-igr.com/webS/request.php/users/request-->
+    <string name="title_activity_building_map_location">BuildingMapLocationActivity</string>
+    <string name="type_of_report">Select Type of Report</string>
+    <string name="mMeterType">Select Meter Type</string>
+    <string name="mConsumerType">Select Consumer Types</string>
+    <string name="mStates">Select State</string>
+    <string name="mprofileType">Select Profile Type</string>
+    <string name="marealist">Select An Area</string>
+    <string name="mBuildingCategory">Select Building Category</string>
+    <string name="mstreetList">Select Street Name</string>
+    <string name="mbuildingList">Select Building Number</string>
+    <string name="mMeterStatus">Select Meter Status</string>
+    <string name="mInstallationType">Select Meter Installation Type</string>
+
+    <string name="title_activity_new_meter_success">Successful Meter Enumeration</string>
+
+    <string name="title_activity_reporting_sccess">ReportingSccessActivity</string>
+    <string name="title_activity_profile_exist">New/Existing Profile</string>
+    <string name="title_activity_individual_profile">individual_profile</string>
+    <string name="title_activity_corperate_profile">corperate_profile</string>
+    <string name="title_activity_bill_search">Bill Search</string>
+    <string name="title_activity_bill_list">Bill List</string>
+    <string name="title_activity_choose_mobile_payment">Mobile Payment</string>
+    <string name="title_activity_i_report">iReportActivity</string>
+    <string name="title_activity_pre__billing">pre_BillingActivity</string>
+    <string name="title_activity_pre_billing">PreBillingActivity</string>
+    <!--http://192.168.8.104/aquabiller/webS/request.php/users/request-->
+</resources>

@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.ensoft.mob.waterbiller.corperate_profile">
+
+    <ScrollView android:id="@+id/billing_form" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:hint="Corperation Name"
+        android:layout_marginTop="10dp"
+      />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/corperationName"
+        android:textSize="16sp"
+        android:layout_marginBottom="5dp"
+        android:inputType="textMultiLine"
+        android:textColor="@color/half_black"
+        android:background="@drawable/apptheme_edit_text_holo_light"
+        />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:hint="RC Number"
+                android:layout_marginTop="10dp"
+                />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rcNumber"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"
+            android:inputType="textMultiLine"
+            android:textColor="@color/half_black"
+            android:background="@drawable/apptheme_edit_text_holo_light"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:hint="Address"
+            android:layout_marginTop="10dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/address"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"
+            android:inputType="textMultiLine"
+            android:textColor="@color/half_black"
+            android:background="@drawable/apptheme_edit_text_holo_light"
+            />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:hint="Phone Number"
+            android:layout_marginTop="10dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phoneNumber"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"
+            android:inputType="textMultiLine"
+            android:textColor="@color/half_black"
+            android:background="@drawable/apptheme_edit_text_holo_light"
+            />
+<!--
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:hint="State"
+            android:layout_marginTop="10dp"
+            />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/state"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/half_black"
+                android:prompt="@string/mStates"
+                android:paddingTop="0dp"
+                android:paddingLeft="0dp"
+                android:spinnerMode="dialog"
+                android:paddingBottom="1dp"
+                android:layout_weight="1.5"
+                android:layout_gravity="left"
+                android:gravity="left"
+                style="@style/SpinnerAppTheme"
+                />
+-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:hint="Email"
+            android:layout_marginTop="10dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"
+            android:inputType="textMultiLine"
+            android:textColor="@color/half_black"
+            android:background="@drawable/apptheme_edit_text_holo_light"
+            />
+            <Button android:id="@+id/mCorperateProfile"
+                style="?android:textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="Save"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+</ScrollView>
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top|center">
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+
+            <ImageView android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/ivAccountIcon"/>
+
+            <TextView android:id="@+id/textViewAccountNo"
+                style="?android:textAppearanceMedium"
+                android:textColor="@color/button_material_dark"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:textSize="13dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="ACCOUNT NO"
+                android:gravity="center"
+                />
+
+            <TextView android:id="@+id/textViewMeterNo"
+                style="?android:textAppearanceMedium"
+                android:textColor="@color/button_material_dark"
+                android:layout_width="0dp"
+                android:textSize="13dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="METER NO"
+                android:paddingLeft="10dp"
+                android:gravity="center" />
+
+            <TextView android:id="@+id/textViewAmount"
+                style="?android:textAppearanceMedium"
+                android:textColor="@color/half_black"
+                android:layout_width="0dp"
+                android:textSize="13dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="AMOUNT"
+                android:gravity="center" />
+
+            <!--<ImageView android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/ivBuildingMapIcon"
+                android:clickable="true"
+                android:onClick="openBuildingLocator"
+                android:maxHeight="25dp"
+                android:maxWidth="25dp"
+                android:src="@drawable/ic_map_locate"
+                android:layout_gravity="center|right" />-->
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!--<LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#959595"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:padding="5dp"
+        android:gravity="top|center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/textViewName"
+            android:layout_marginRight="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/textViewBillDate"
+            android:layout_gravity="right"
+            android:gravity="right" />
+    </LinearLayout>-->
+
+</LinearLayout>

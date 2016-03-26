@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ensoft.mob.waterbiller.MainActivity">
+
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_settings"/>
+
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="200"
+        android:title="Logout"
+        android:icon="@drawable/ic_about"
+        app:showAsAction="ifRoom"></item>
+
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="300"
+        android:title="Logout"
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="ifRoom"></item>
+
+    <!--<item
+        android:id="@+id/action_searchList"
+        android:orderInCategory="400"
+        android:title="Search List"
+        android:icon="@drawable/ic_view"
+        app:showAsAction="ifRoom"
+        ></item>
+
+    <item
+        android:id="@+id/action_notification"
+        android:orderInCategory="500"
+        android:title="Logout"
+        android:icon="@drawable/ic_notification"
+        app:showAsAction="ifRoom"></item>-->
+</menu>

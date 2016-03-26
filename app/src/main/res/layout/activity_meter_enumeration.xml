@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.ensoft.mob.waterbiller.MeterEnumerationActivity">
+
+    <ScrollView android:id="@+id/billing_form" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp"
+        >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/AreaName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:text="Area Name"
+            android:textColor="@color/half_black"/>
+
+        <EditText
+            android:id="@+id/mAreaName"
+            android:layout_width="0dp"
+            android:editable="false"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:textColor="@color/half_black"
+            android:background="@drawable/apptheme_edit_text_holo_light"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:text="Street Name"
+            android:textColor="@color/half_black" />
+
+        <EditText
+            android:id="@+id/mStreetName"
+            android:editable="false"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:textColor="@color/half_black"
+            android:background="@drawable/apptheme_edit_text_holo_light"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/HouseNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:text="House Number"
+                android:textColor="@color/half_black" />
+
+            <EditText
+                android:id="@+id/mHouseNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:textSize="16sp"
+                android:inputType="text"
+                android:textColor="@color/half_black"
+                android:background="@drawable/apptheme_edit_text_holo_light"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:hint="Meter Number"
+            android:layout_marginTop="10dp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mMeterNumber"
+            android:textSize="16sp"
+            android:layout_marginBottom="5dp"
+            android:inputType="text"
+            android:textColor="@color/half_black"
+            android:background="@drawable/apptheme_edit_text_holo_light"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:hint="Consumer Type"
+            android:layout_marginTop="10dp" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mConsumerType"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/half_black"
+            android:prompt="@string/mConsumerType"
+            android:paddingTop="0dp"
+            android:paddingLeft="0dp"
+            android:spinnerMode="dialog"
+            android:paddingBottom="1dp"
+            android:layout_weight="1.5"
+            android:layout_gravity="left"
+            android:gravity="left"
+            style="@style/SpinnerAppTheme"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+              android:textSize="16sp"
+            android:hint="Meter Account Type"
+            android:layout_marginTop="10dp" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mMeterType"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/half_black"
+            android:prompt="@string/mMeterType"
+            android:paddingTop="0dp"
+            android:paddingLeft="0dp"
+            android:spinnerMode="dialog"
+            android:paddingBottom="1dp"
+            android:layout_weight="1.5"
+            android:layout_gravity="left"
+            android:gravity="left"
+            style="@style/SpinnerAppTheme"
+            />
+       <!--<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Meter Installation Type"
+           android:textSize="16sp"
+           android:layout_marginTop="10dp" />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mInstallationType"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/half_black"
+            android:prompt="@string/mInstallationType"
+            android:paddingTop="0dp"
+            android:paddingLeft="0dp"
+            android:spinnerMode="dialog"
+            android:paddingBottom="1dp"
+            android:layout_weight="1.5"
+            android:layout_gravity="left"
+            android:gravity="left"
+            style="@style/SpinnerAppTheme"
+            />-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Meter Installation Type"
+            android:textSize="16sp"
+            />
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mMeterInstallationType"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/half_black"
+            android:prompt="@string/mInstallationType"
+            android:paddingTop="0dp"
+            android:paddingLeft="0dp"
+            android:spinnerMode="dialog"
+            android:paddingBottom="1dp"
+            android:layout_weight="1.5"
+            android:layout_gravity="left"
+            android:gravity="left"
+            style="@style/SpinnerAppTheme"
+            />
+    <Button android:id="@+id/mSaveMeterEnumeration"
+        style="?android:textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="Save"
+        android:textStyle="bold" />
+
+
+    </LinearLayout>
+</ScrollView>
+
+</RelativeLayout>

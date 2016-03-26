@@ -1,0 +1,236 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StreetListActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#333333"
+        android:padding="0dp"
+        android:gravity="center">
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:id="@+id/spinnerAllActiveAreaCodes"
+            android:padding="0dp" />
+
+    </LinearLayout>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls" style="?metaButtonBarStyle"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@color/button_material_dark"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent"
+            android:padding="4dp">
+
+            <TextView android:id="@+id/btnID"
+                style="?android:textAppearanceMedium"
+                android:background="@color/button_material_dark"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ID"
+                android:gravity="center"
+                android:layout_marginLeft="45dp"
+                android:visibility="gone" />
+
+            <TextView android:id="@+id/btnNAME"
+                style="?android:textAppearanceMedium"
+                android:background="@color/button_material_dark"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="NAME"
+                android:layout_marginLeft="45dp"
+                android:paddingLeft="12dp"
+                android:gravity="left|center" />
+
+            <TextView android:id="@+id/btnBUILDINGS"
+                style="?android:textAppearanceMedium"
+                android:background="@color/button_material_dark"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BUILDINGS"
+                android:gravity="center" />
+
+            <TextView android:id="@+id/btnTOTALACCOUNT"
+                style="?android:textAppearanceMedium"
+                android:background="@color/button_material_dark"
+                android:textColor="@color/white"
+                android:layout_width="0dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ACCOUNTS"
+                android:gravity="center" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="No area/street cluster assigned to you yet."
+                android:id="@+id/textView2"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:textSize="17dp"
+                android:visibility="invisible"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listView_Street" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:layout_gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@drawable/abc_list_focused_holo"
+            android:layout_marginRight="4dp">
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:id="@+id/spinnerAllActiveAreaCodes"
+                android:padding="0dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15sp"
+                android:textColor="#ffffff"
+                android:text="ID"
+                android:id="@+id/textViewID" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15dp"
+                android:textColor="#ffffff"
+                android:text="NAME"
+                android:id="@+id/textViewNAME" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15dp"
+                android:textColor="#ffffff"
+                android:text="TOTAL ACCOUNT"
+                android:id="@+id/textViewTOTALACCOUNT" />
+        </LinearLayout>
+
+    </LinearLayout>-->
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#333333"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <TextView android:id="@+id/hello_man"
+                android:text="Street Names Assigned To You By Area Codes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                android:layout_gravity="center"
+                android:gravity="center" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="15dp"
+                android:text="Active Area Codes:"
+                android:id="@+id/textView" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerAllActiveAreaCodes"
+                 />
+        </LinearLayout>
+
+        <ScrollView android:id="@+id/table_viewer" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableLayout
+                android:id="@+id/maintable"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:stretchColumns="1,0,0">
+
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>-->
+
+</RelativeLayout>
